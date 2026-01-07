@@ -142,7 +142,7 @@ while idx < len(files):
             img = glossy_compensation(img)
 
             temp = path + "_tmp.tif"
-            img.save(temp, format="TIFF", compression="tiff_lzw", dpi=(1200,1200))
+            img.save(temp, format="JPEG", quality=95, dpi=(1200,1200))
 
             x = margin_x + col * print_w
             y = PAGE_H - margin_y - (row + 1) * print_h
